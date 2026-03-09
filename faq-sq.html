@@ -1,1 +1,44 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DailyReminder – FAQ</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}
+    details{border:1px solid #e5e5e5;border-radius:12px;padding:12px;margin:10px 0}
+    summary{cursor:pointer;font-weight:600}
+    .muted{color:#666}
+  </style>
+</head>
+<body>
+  <h1>FAQ / Ndihmë</h1>
+  <p class="muted">Përditësuar më: <span id="d"></span></p>
 
+  <details>
+    <summary>Pse nuk më vijnë njoftimet?</summary>
+    <p>
+      Kontrollo iOS Settings → Notifications → DailyReminder dhe sigurohu që njoftimet janë të lejuara.
+      Kontrollo gjithashtu Focus mode, Low Power Mode dhe Notification Summary.
+    </p>
+  </details>
+
+  <details>
+    <summary>Si t’i fshij të gjitha të dhënat?</summary>
+    <p>
+      Në aplikacion: Settings → Advanced → “Fshi të gjitha të dhënat”.
+    </p>
+  </details>
+
+  <details>
+    <summary>Si të kontaktoj support?</summary>
+    <p>
+      Shkruaj në <a href="mailto:Dailyreminder@hotmail.com">Dailyreminder@hotmail.com</a> dhe bashkëngjit “Diagnostics” nga aplikacioni.
+    </p>
+  </details>
+
+  <script>
+    document.getElementById('d').textContent = new Date().toLocaleDateString('sq-AL');
+  </script>
+</body>
+</html>
