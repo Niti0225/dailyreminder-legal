@@ -1,1 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DailyReminder – FAQ</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}
+    h1,h2{line-height:1.25}
+    details{border:1px solid #e5e5e5;border-radius:12px;padding:12px;margin:10px 0}
+    summary{cursor:pointer;font-weight:600}
+    .muted{color:#666}
+  </style>
+</head>
+<body>
+  <h1>FAQ / Support</h1>
+  <p class="muted">Stand: <span id="d"></span></p>
 
+  <details>
+    <summary>Warum kommen Benachrichtigungen nicht?</summary>
+    <p>
+      Bitte prüfe iOS Einstellungen → Mitteilungen → DailyReminder und stelle sicher, dass Mitteilungen erlaubt sind.
+      Achte außerdem auf Fokus-Modi, Energiesparmodus und „Geplante Zusammenfassung“.
+    </p>
+  </details>
+
+  <details>
+    <summary>Wie lösche ich alle Daten?</summary>
+    <p>
+      In der App: Settings → Advanced → „Alle Daten löschen“.
+    </p>
+  </details>
+
+  <details>
+    <summary>Wie kann ich Support kontaktieren?</summary>
+    <p>
+      Schreibe an <a href="mailto:Dailyreminder@hotmail.com">Dailyreminder@hotmail.com</a> und füge am besten „Diagnostics“ aus der App bei.
+    </p>
+  </details>
+
+  <script>
+    document.getElementById('d').textContent = new Date().toLocaleDateString('de-DE');
+  </script>
+</body>
+</html>
