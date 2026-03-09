@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DailyReminder – Datenschutzerklärung</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}
+    h1,h2{line-height:1.25}
+    a{color:#0a84ff}
+    small{color:#666}
+    .muted{color:#666}
+    code{background:#f5f5f5;padding:2px 6px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <h1>Datenschutzerklärung</h1>
+  <p class="muted">Für die App „DailyReminder“ (iOS). Stand: <span id="d"></span></p>
 
+  <h2>1. Verantwortlicher</h2>
+  <p>
+    Verantwortlich für die Datenverarbeitung im Sinne der DSGVO:<br>
+    DailyReminder (privates Projekt)<br>
+    E-Mail: <a href="mailto:Dailyreminder@hotmail.com">Dailyreminder@hotmail.com</a>
+  </p>
+
+  <h2>2. Welche Daten verarbeitet die App?</h2>
+  <p>
+    DailyReminder speichert von dir erstellte Reminder (Titel, Zeiten/Intervalle, Erledigungsstatus/Statistiken) <strong>lokal auf deinem Gerät</strong>.
+    Die App verwendet hierfür den Gerätespeicher (UserDefaults).
+  </p>
+
+  <h2>3. Benachrichtigungen</h2>
+  <p>
+    Wenn du Benachrichtigungen aktivierst, nutzt die App Apples Push-/Notification-Systeme, um Erinnerungen auf deinem Gerät anzuzeigen.
+    Die App sendet dabei keine persönlichen Inhalte an uns als Betreiber.
+  </p>
+
+  <h2>4. Werbung (Google AdMob)</h2>
+  <p>
+    In der kostenlosen Version kann die App Werbung anzeigen. Dafür wird das Werbe-SDK von Google (Google AdMob / Google Mobile Ads) verwendet.
+    Dabei können Geräteinformationen (z.B. Gerätekennung/Advertising Identifier, IP-Adresse, ungefähre Standortdaten) verarbeitet werden, um Werbung auszuliefern und zu messen.
+  </p>
+  <p>
+    Weitere Infos zur Datenverarbeitung durch Google findest du hier:
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>.
+  </p>
+
+  <h2>5. Abos / Käufe (später)</h2>
+  <p>
+    Falls in Zukunft Abonnements angeboten werden, erfolgt die Abwicklung über Apples In-App-Käufe. Optional kann ein Dienst wie RevenueCat genutzt werden,
+    um den Abo-Status zu verwalten. Sobald aktiv, wird diese Datenschutzerklärung entsprechend ergänzt.
+  </p>
+
+  <h2>6. Deine Rechte</h2>
+  <p>
+    Du hast nach DSGVO u.a. das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
+    Da die App Daten primär lokal speichert, kannst du die Daten in der Regel direkt in der App löschen (z.B. „Alle Daten löschen“ in den Einstellungen).
+  </p>
+
+  <h2>7. Kontakt</h2>
+  <p>
+    Bei Fragen zum Datenschutz:
+    <a href="mailto:Dailyreminder@hotmail.com">Dailyreminder@hotmail.com</a>
+  </p>
+
+  <script>
+    document.getElementById('d').textContent = new Date().toLocaleDateString('de-DE');
+  </script>
+</body>
+</html>
