@@ -1,1 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DailyReminder – Impressum</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}
+    h1,h2{line-height:1.25}
+    .muted{color:#666}
+    .warn{background:#fff3cd;border:1px solid #ffeeba;padding:12px;border-radius:12px}
+  </style>
+</head>
+<body>
+  <h1>Impressum</h1>
+  <p class="muted">Stand: <span id="d"></span></p>
 
+  <div class="warn">
+    <strong>Hinweis:</strong> Dieses Projekt befindet sich aktuell im Aufbau. Für Anfragen nutze bitte die Kontakt-E-Mail.
+    Sobald die gewerbliche Tätigkeit offiziell aufgenommen ist, wird das Impressum mit vollständigen Angaben ergänzt.
+  </div>
+
+  <h2>Kontakt</h2>
+  <p>
+    E-Mail: <a href="mailto:Dailyreminder@hotmail.com">Dailyreminder@hotmail.com</a>
+  </p>
+
+  <script>
+    document.getElementById('d').textContent = new Date().toLocaleDateString('de-DE');
+  </script>
+</body>
+</html>
