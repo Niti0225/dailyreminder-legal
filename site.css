@@ -257,7 +257,16 @@ h3 {
 }
 
 .phone-status,
-.app-header {
+.phone-nav,
+.app-status-card,
+.mini-task,
+.phone-premium {
+  position: relative;
+  z-index: 1;
+}
+
+.phone-status,
+.phone-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -271,36 +280,85 @@ h3 {
   padding: 6px 6px 18px;
 }
 
-.app-header {
-  justify-content: flex-start;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.76);
+.phone-nav {
+  padding: 0 2px 14px;
 }
 
-.app-header span {
-  display: block;
+.phone-nav h2 {
+  font-size: 27px;
+  line-height: 1;
+}
+
+.phone-plus {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  box-shadow: 0 12px 28px rgba(8, 120, 255, 0.28);
+}
+
+.app-status-card {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 14px 32px rgba(16, 24, 40, 0.08);
+}
+
+.status-row {
+  display: flex;
+  gap: 8px;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.status-chip.green {
+  color: var(--green);
+}
+
+.status-chip.orange {
+  color: #f97316;
+}
+
+.status-chip.gray {
+  color: var(--muted);
+}
+
+.app-status-card p {
+  margin: 8px 0 10px;
   color: var(--muted);
   font-size: 13px;
 }
 
-.progress-ring {
-  width: 172px;
-  height: 172px;
+.challenge-line {
   display: grid;
-  place-items: center;
-  margin: 28px auto;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at center, #fff 0 55%, transparent 56%),
-    conic-gradient(var(--green) 0deg 216deg, rgba(16, 24, 40, 0.1) 216deg 360deg);
-  box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.08);
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
 }
 
-.progress-ring span {
-  font-size: 30px;
-  font-weight: 900;
+.challenge-line span {
+  height: 6px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, var(--green) 0 58%, rgba(16, 24, 40, 0.12) 58% 100%);
+}
+
+.challenge-line strong {
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 .mini-task,
@@ -313,21 +371,102 @@ h3 {
   backdrop-filter: blur(18px);
 }
 
+.task-list {
+  margin-top: 14px;
+}
+
 .mini-task {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-top: 10px;
   padding: 13px 14px;
   border-radius: 16px;
-  color: var(--muted);
-  font-weight: 700;
 }
 
-.mini-task.done {
-  color: var(--green);
+.mini-task strong,
+.mini-task span {
+  display: block;
+}
+
+.mini-task strong {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.mini-task span {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.mini-task i {
+  width: 42px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--green);
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.mini-task i::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.mini-task i.off {
+  background: rgba(16, 24, 40, 0.16);
+}
+
+.mini-task i.off::after {
+  right: 19px;
 }
 
 .mini-task.active {
-  color: var(--text);
   box-shadow: 0 16px 30px rgba(8, 120, 255, 0.14);
+}
+
+.phone-premium {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.phone-premium > span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(233, 169, 0, 0.16);
+  color: var(--yellow);
+}
+
+.phone-premium strong,
+.phone-premium small {
+  display: block;
+}
+
+.phone-premium strong {
+  font-size: 14px;
+}
+
+.phone-premium small {
+  color: var(--muted);
+  font-size: 11px;
 }
 
 .float-card {
@@ -636,17 +775,12 @@ h3 {
       linear-gradient(145deg, #070b10 0%, #0f172a 54%, #111827 100%);
   }
 
-  .app-header,
+  .app-status-card,
+  .phone-premium,
   .phone-shell {
     background:
       linear-gradient(160deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.82)),
       linear-gradient(180deg, rgba(91, 167, 255, 0.2), transparent);
-  }
-
-  .progress-ring {
-    background:
-      radial-gradient(circle at center, #111827 0 55%, transparent 56%),
-      conic-gradient(var(--green) 0deg 216deg, rgba(248, 250, 252, 0.12) 216deg 360deg);
   }
 }
 
